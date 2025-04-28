@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Image - Image Processing Tools</title>
+    <meta name="description" content="Generate images from text descriptions with AI">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Image Processing Tools</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Image to PDF</a></li>
+                    <li><a href="bg-remover.html">BG Remover</a></li>
+                    <li><a href="image-enhancer.html">Image Enhancer</a></li>
+                    <li class="active"><a href="text-to-image.html">Text to Image</a></li>
+                    <li><a href="image-resizer.html">Image Resizer</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="text-to-image" class="tool-section active">
+                <h2>Text to Image Generator</h2>
+                <p>Generate images from text descriptions using AI.</p>
+                
+                <div class="text-input-container">
+                    <div class="text-input-area">
+                        <h3>Enter Your Description</h3>
+                        <textarea id="prompt-input" placeholder="Describe the image you want to generate..." rows="5"></textarea>
+                        
+                        <div class="generation-options">
+                            <h3>Generation Options</h3>
+                            <div class="option-group">
+                                <label for="model-select">Model:</label>
+                                <select id="model-select">
+                                    <option value="stabilityai/stable-diffusion-xl-base-1.0">Stable Diffusion XL</option>
+                                    <option value="runwayml/stable-diffusion-v1-5">Stable Diffusion v1.5</option>
+                                </select>
+                            </div>
+                            <div class="option-group">
+                                <label for="num-steps">Steps:</label>
+                                <input type="range" id="num-steps" min="20" max="50" value="30" class="slider">
+                                <span id="steps-value">30</span>
+                            </div>
+                            <div class="option-group">
+                                <label for="guidance-scale">Guidance Scale:</label>
+                                <input type="range" id="guidance-scale" min="1" max="20" value="7.5" step="0.5" class="slider">
+                                <span id="guidance-value">7.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="image-preview-container" id="preview-container">
+                        <h3>Generated Image</h3>
+                        <div id="image-preview" class="image-preview-area">
+                            <p class="placeholder-text">Your generated image will appear here</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <button id="generate-btn" class="primary-btn">Generate Image</button>
+                    <button id="clear-btn" class="secondary-btn">Clear</button>
+                </div>
+                
+                <div id="result" class="result-container hidden">
+                    <h3>Image Generated!</h3>
+                    <div id="download-container"></div>
+                </div>
+                
+                <div id="loading" class="loading-container hidden">
+                    <div class="spinner"></div>
+                    <p>Generating your image...</p>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 Image Processing Tools. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="text-to-image.js"></script>
+</body>
+</html>

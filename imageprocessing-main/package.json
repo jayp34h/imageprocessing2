@@ -1,0 +1,19 @@
+{
+  "name": "image-processing-tools",
+  "version": "1.0.0",
+  "description": "Image Processing Tools Web Application",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx --yes http-server -o"
+  },
+  "keywords": [
+    "image",
+    "pdf",
+    "converter"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "convertapi-js": "^1.0.8"
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing Tools</title>
+    <meta name="description" content="Convert images to PDF and other image processing tools">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Image Processing Tools</h1>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#">Image to PDF</a></li>
+                    <li><a href="bg-remover.html">BG Remover</a></li>
+                    <li><a href="image-enhancer.html">Image Enhancer</a></li>
+                    <li><a href="text-to-image.html">Text to Image</a></li>
+                    <li><a href="image-resizer.html">Image Resizer</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="image-to-pdf" class="tool-section active">
+                <h2>Image to PDF Converter</h2>
+                <p>Convert your images to PDF format with just a few clicks.</p>
+                
+                <div class="upload-container">
+                    <div class="upload-area" id="drop-area">
+                        <p>Drag & Drop images here</p>
+                        <p>OR</p>
+                        <label for="file-input" class="upload-btn">Select Files</label>
+                        <input type="file" id="file-input" accept="image/*" multiple hidden>
+                    </div>
+                    
+                    <div class="selected-files" id="selected-files">
+                        <h3>Selected Images</h3>
+                        <ul id="file-list"></ul>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <button id="convert-btn" class="primary-btn" disabled>Convert to PDF</button>
+                    <button id="clear-btn" class="secondary-btn" disabled>Clear All</button>
+                </div>
+                
+                <div id="result" class="result-container hidden">
+                    <h3>Your PDF is Ready!</h3>
+                    <div id="download-container"></div>
+                </div>
+                
+                <div id="loading" class="loading-container hidden">
+                    <div class="spinner"></div>
+                    <p>Converting your images...</p>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 Image Processing Tools. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

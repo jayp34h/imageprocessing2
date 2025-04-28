@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Enhancer - Image Processing Tools</title>
+    <meta name="description" content="Enhance your images with just a few clicks">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Image Processing Tools</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Image to PDF</a></li>
+                    <li><a href="bg-remover.html">BG Remover</a></li>
+                    <li class="active"><a href="image-enhancer.html">Image Enhancer</a></li>
+                    <li><a href="text-to-image.html">Text to Image</a></li>
+                    <li><a href="#">Image Resizer</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="image-enhancer" class="tool-section active">
+                <h2>Image Enhancer</h2>
+                <p>Enhance your images with professional quality effects.</p>
+                
+                <div class="upload-container">
+                    <div class="upload-area" id="drop-area">
+                        <p>Drag & Drop an image here</p>
+                        <p>OR</p>
+                        <label for="file-input" class="upload-btn">Select File</label>
+                        <input type="file" id="file-input" accept="image/*" hidden>
+                    </div>
+                    
+                    <div class="preview-container" id="preview-container">
+                        <h3>Image Preview</h3>
+                        <div class="image-preview">
+                            <div class="original-image">
+                                <h4>Original</h4>
+                                <div id="original-preview"></div>
+                            </div>
+                            <div class="processed-image">
+                                <h4>Enhanced</h4>
+                                <div id="processed-preview"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="enhancement-controls" id="enhancement-controls">
+                    <h3>Enhancement Options</h3>
+                    <div class="enhancement-options">
+                        <div class="enhancement-option">
+                            <label for="brightness">Brightness</label>
+                            <input type="range" id="brightness" min="-100" max="100" value="0" class="slider">
+                            <span id="brightness-value">0</span>
+                        </div>
+                        <div class="enhancement-option">
+                            <label for="contrast">Contrast</label>
+                            <input type="range" id="contrast" min="-100" max="100" value="0" class="slider">
+                            <span id="contrast-value">0</span>
+                        </div>
+                        <div class="enhancement-option">
+                            <label for="saturation">Saturation</label>
+                            <input type="range" id="saturation" min="-100" max="100" value="0" class="slider">
+                            <span id="saturation-value">0</span>
+                        </div>
+                        <div class="enhancement-option">
+                            <label for="sharpness">Sharpness</label>
+                            <input type="range" id="sharpness" min="0" max="100" value="0" class="slider">
+                            <span id="sharpness-value">0</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <button id="enhance-btn" class="primary-btn" disabled>Enhance Image</button>
+                    <button id="clear-btn" class="secondary-btn" disabled>Clear</button>
+                </div>
+                
+                <div id="result" class="result-container hidden">
+                    <h3>Image Enhanced!</h3>
+                    <div id="download-container"></div>
+                </div>
+                
+                <div id="loading" class="loading-container hidden">
+                    <div class="spinner"></div>
+                    <p>Enhancing image...</p>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 Image Processing Tools. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="image-enhancer.js"></script>
+</body>
+</html>
