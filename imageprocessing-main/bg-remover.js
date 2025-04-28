@@ -1,6 +1,6 @@
 // Global variables
 let selectedFile = null;
-const API_KEY = 'XvsvcY5dSVWZEAf9zKcefdr8'; // RemoveBG API key
+const API_KEY = ''; // RemoveBG API key
 
 // DOM Elements
 const dropArea = document.getElementById('drop-area');
