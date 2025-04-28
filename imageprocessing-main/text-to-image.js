@@ -1,6 +1,6 @@
 // Global variables
 let generatedImageUrl = null;
-const API_TOKEN = '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'; // Hugging Face API token
+const API_TOKEN = ''; // Hugging Face API token
 
 // Generation settings
 let generationSettings = {
